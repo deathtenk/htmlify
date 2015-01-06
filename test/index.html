@@ -1,0 +1,101 @@
+<!-- -->
+  i = doc 'html'
+  
+  <!DOCTYPE html>
+<!-- -->
+  
+<!-- -->
+  i.head [
+    title 'This is the page title',
+    script src: '/js/jquery.min.js'
+  ]
+  
+  <head>
+	  <title>This is the page title</title>
+	  <script src="/js/jquery.min.js"></script>
+  </head>
+<!-- -->
+  
+<!-- -->
+  i.style [
+    #
+    # box1
+    css :box1 [
+      'border-style: dotted',
+      'padding-left: 10px',
+      'padding-right: 10px',
+      'padding-top: 10px',
+      'padding-bottom: 10px'
+    ]
+    
+    # box2
+    css :box2 [
+      'border-style: dotted',
+      'padding-left: 10px',
+      'padding-right: 10px',
+      'padding-top: 10px',
+      'padding-bottom: 10px'
+    ]
+    #
+  ]
+  
+  <style>
+  #box1 {
+	  border-style: dotted;
+	  padding-left: 10px;
+	  padding-right: 10px;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+  }
+  
+  #box2 {
+	  border-style: dotted;
+	  padding-left: 10px;
+	  padding-right: 10px;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+  }
+  </style>
+<!-- -->
+  
+<!-- -->
+  i.body [
+    #
+    div 'Hello! This is a box!', :box1
+    div 'Hello! This is another box!', :box2
+    
+    # alt syntax
+    
+    div :box1 [
+      'Hello. I am box'
+    ]
+    #
+  ]
+  
+  <body>
+	  <div id ='box1'>
+		  Hello! This is a box!
+	  </div>
+	  
+	  <div id ='box2'>
+		  Hello! This is another box!
+	  </div>
+	  
+<!-- alt syntax -->
+	  
+	  <div id ='box1'>
+		  Hello. I am box
+	  </div>
+  </body>
+  
+<!-- -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
