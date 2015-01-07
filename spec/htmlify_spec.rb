@@ -51,10 +51,10 @@ describe 'creating a div' do
   describe 'bigger html templates with nested lists' do
     before(:each) do
       @expected_template = "<body>before nested<div>in nested</div>after nested</body>"
-      p HtmlBeautifier.beautify @expected_template
       @template = html(:body, 
                     ["before nested",
-                    html(:div, "in nested"), 
+                    html(:div, 
+                      "in nested"), 
                     "after nested"])
 
     end

@@ -9,8 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Henk Reder"]
   spec.email         = ["hnk.reder@gmail.com"]
   spec.summary       = %q{a gem to generate HTML and CSS templates}
-  spec.description   = %q{to use this: 
-                          html :div, "Hello World!", id: 'window'}
+  spec.description   = %q{}
   spec.homepage      = ""
   spec.license       = "MIT"
 

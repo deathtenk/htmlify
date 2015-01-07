@@ -1,5 +1,4 @@
 require "htmlify/version"
-require 'htmlbeautifier'
 
 module Htmlify
   def html tag, content="", properties={}
