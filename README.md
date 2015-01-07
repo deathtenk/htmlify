@@ -1,4 +1,4 @@
-# Htmlify
+h# Htmlify
 
 TODO: Write a gem description
 
@@ -20,7 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+  html :div, "Hello World!", id: 'window'
+  # returns <div id='window'> "Hello World!"</div>
+```
 
 ## Contributing
 

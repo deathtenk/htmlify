@@ -40,12 +40,29 @@ describe 'creating a div' do
     before(:each) do
       @expected_template = "<body><div>I'm a nested div!</div></body>"
       @template = html :body, (
-                    html :div, "I'm a nested div!")
+                    html :div, "I'm a nested div!" )
     end
 
     it 'returns an html template with nested elements' do
       expect(@template).to eq(@expected_template)
     end
   end
+
+  describe 'bigger html templates with nested lists' do
+    before(:each) do
+      @expected_template = "<body>before nested<div>in nested</div>after nested</body>"
+      p HtmlBeautifier.beautify @expected_template
+      @template = html(:body, 
+                    ["before nested",
+                    html(:div, "in nested"), 
+                    "after nested"])
+
+    end
+
+    it 'returns an html template with nested elements and elements in the outer elements' do
+      expect(@template).to eq(@expected_template)
+    end
+  end
+
 
 end

@@ -1,11 +1,12 @@
 require "htmlify/version"
+require 'htmlbeautifier'
 
 module Htmlify
-  def html tag, content, properties={}
-    if properties.any?
-      return "<#{tag}#{get_properties properties}>#{content}</#{tag}>"
+  def html tag, content="", properties={}
+    if (content.kind_of?(Array))
+      return "<#{tag}#{get_properties properties}>#{distribute_content content}</#{tag}>"
     end
-    "<#{tag}>#{content}</#{tag}>"
+    return "<#{tag}#{get_properties properties}>#{content}</#{tag}>"
   end
 
   def get_properties properties
@@ -14,5 +15,13 @@ module Htmlify
       ps = ps + " #{key}='#{value}'"
     end
     ps
+  end
+
+  def distribute_content content
+    content_string = ""
+    content.each do |element|
+      content_string = content_string + element
+    end
+    return content_string
   end
 end
